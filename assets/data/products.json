@@ -1,0 +1,67 @@
+[
+  {
+    "name": "FGMB",
+    "url": "https://fgmb.com.ng/",
+    "category": "Finance / Banking",
+    "description": "First Generation Mortgage Bank (FGMB) is a licensed primary mortgage institution in Nigeria that provides innovative financial products tailored to home ownership and wealth creation. Their services extend beyond mortgage financing to include savings, current accounts, real estate advisory, and investment opportunities, helping individuals and businesses secure their financial future.",
+    "features": [
+      "Mortgage and home ownership financing",
+      "Personal savings and current account services",
+      "Real estate advisory and investment guidance",
+      "Tailored financial products for individuals and businesses"
+    ],
+    "image": "fgmb"
+  },
+  {
+    "name": "Easplay Videos",
+    "url": "https://videos.easplay.com/",
+    "category": "Streaming / Video",
+    "description": "Easplay Videos is an entertainment streaming platform that provides users with seamless access to movies, TV shows, and on-demand video content. Optimized for both mobile and web, the platform integrates flexible payment options including airtime billing, making it accessible to a wide audience in emerging markets.",
+    "features": [
+      "Unlimited on-demand streaming of movies and shows",
+      "Airtime and mobile payment integration",
+      "High-definition video playback",
+      "Cross-platform support (web and mobile)"
+    ],
+    "image": "streambites"
+  },
+  {
+    "name": "100Bricks",
+    "url": "https://100bricks.ng/",
+    "category": "Real Estate / Platform",
+    "description": "100Bricks is a proptech platform revolutionizing real estate investment in Nigeria by allowing users to invest in fractional property ownership. It combines property listings with financial technology to make real estate accessible, transparent, and profitable for both individuals and institutional investors.",
+    "features": [
+      "Property listings with fractional ownership opportunities",
+      "Real estate investment marketplace",
+      "Data-driven market analytics and insights",
+      "Tools for secure and transparent transactions"
+    ],
+    "image": "hundredbricks"
+  },
+  {
+    "name": "Easplay Games",
+    "url": "https://games.easplay.com/",
+    "category": "Gaming / Entertainment",
+    "description": "Easplay Games is a browser and mobile gaming portal designed to deliver fun, engaging, and rewarding experiences. With a library of interactive games, leaderboards, and reward systems, the platform provides entertainment while also creating opportunities for competition and subscription-based engagement.",
+    "features": [
+      "Interactive browser and mobile-friendly games",
+      "Leaderboard systems with competitive rewards",
+      "Subscription models for premium access",
+      "Casual and skill-based gaming options"
+    ],
+    "image": "easplay"
+  },
+  {
+    "name": "Xeliai AI",
+    "url": "https://xeliai.com/",
+    "category": "AI / SaaS",
+    "description": "Xeliai is an AI-powered SaaS platform that helps businesses automate processes, unlock insights from data, and scale intelligently. It combines machine learning, predictive analytics, and integration-ready APIs to deliver intelligent automation and smarter decision-making tools for modern enterprises.",
+    "features": [
+      "AI-driven intelligent process automation",
+      "Advanced data analytics and visualization toolkit",
+      "Integration-ready APIs for business systems",
+      "Scalable and secure SaaS infrastructure"
+    ],
+    "image": "xeliai"
+  }
+]
