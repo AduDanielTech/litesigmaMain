@@ -31,10 +31,10 @@
       background-color: var(--color-bg);
       color: var(--color-text);
       line-height: 1.6;
-      padding-top: 80px;
+      padding-top: 0rem;
     }
 
-    header {
+    header {  
       position: fixed;
   top: 0;
   left: 0;
@@ -61,6 +61,17 @@
         width: 5vw;
         height: auto;
     }
+
+  /* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  z-index: 1001; 
+}
     
     nav a {
       margin-left: 1.5rem;
@@ -76,9 +87,10 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 4rem  2rem;
+  
   min-height: 90vh; /* fills screen nicely */
-  background: url("../images/1.png") no-repeat center center;
+  background: url("../images/1.webp") no-repeat center center;
   background-size: cover;
   color: var(--color-text);
 }
@@ -148,7 +160,69 @@
       .hero_text p {
         font-size: 1rem;
       }
-      
+        header {
+    position: sticky;
+    z-index: 1000;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh; /* full height */
+    width: 250px;
+    background: var(--color-surface);
+    flex-direction: column;
+    padding: 4rem 2rem;
+    transform: translateX(100%); /* hidden off screen */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+  }
+
+   .litesigma_logo{
+
+        width: 10vw;
+        height: auto;
+    }
+  nav a {
+    margin: 1rem 0;
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    transition: color 0.2s;
+  }
+
+  nav a:hover {
+    color: var(--color-accent);
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    z-index: 1002; /* stays above nav */
+  }
+
+  /* Show menu */
+  nav.active {
+    transform: translateX(0);
+  }
+
+  /* Optional backdrop overlay */
+  .nav-overlay {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
     }
 
     /* our services section */
@@ -529,7 +603,7 @@
 }
 
 .product-hero{
-   background: url("../images/product_hero.png") no-repeat center center;
+   background: url("../images/product_hero.webp") no-repeat center center;
 }
 .products-grid {
   display: grid;
@@ -671,7 +745,7 @@
 
 /* servies page */
 .services-hero{
-   background: url("../images/services_hero.png") no-repeat center center;
+   background: url("../images/services_hero.webp") no-repeat center center;
    
 }
 
