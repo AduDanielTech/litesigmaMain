@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lite Sigma Tech | Contact Us</title>
+
+  <!--====== Google Font ======-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  <!--====== Font Awesome (for icons) ======-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+
+  <style>
+   
+
+ 
+
+    /* ====== CONTACT SECTION ====== */
+    .contact-section {
+      background: var(--color-bg);
+      padding: 9rem 1rem;
+      
+      font-family: "Oswald", sans-serif;
+    }
+
+    .contact-section .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .contact-section .section-header h1 {
+      font-size: 3.5rem;
+      color: var(--color-accent);
+      margin-bottom: 10px;
+    }
+
+    .contact-section .section-header p {
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    /* Left side */
+    .contact-info {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      animation: slideInLeft 1s ease-out;
+    }
+
+    .contact-info h2 {
+      color: var(--color-accent);
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .contact-details p {
+      margin: 8px 0;
+      font-size: 0.95rem;
+    }
+
+    .contact-social {
+      margin-top: 20px;
+    }
+
+    .contact-social a {
+      color: var(--color-accent);
+      font-size: 1.3rem;
+      margin-right: 15px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .contact-social a:hover {
+      color: #000;
+      transform: scale(1.2);
+    }
+
+    /* Right side */
+    .contact-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      animation: slideInRight 1s ease-out;
+    }
+
+    .contact-form h2 {
+      color: var(--color-accent);
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-accent);
+      outline: none;
+    }
+
+    .btn-accent {
+      display: inline-block;
+      background: var(--color-accent);
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-accent:hover {
+      background: #a44c0d;
+      transform: scale(1.05);
+    }
+
+    /* Animations */
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="assets/images/litesigma_logo.webp" alt="logo" class="litesigma_logo">
+    </a>
+
+    <button class="hamburger" aria-label="Toggle menu">☰</button>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="#">Blog</a>
+      <a href="contact-us.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section class="contact-section">
+    <div class="section-header">
+      <h1>CONTACT US</h1>
+      <p>Have questions? Let’s connect and get your business moving forward.</p>
+    </div>
+
+    <div class="contact-container">
+
+      <!-- Info -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>We’d love to hear from you. Reach out for inquiries, collaborations, or support.</p>
+
+        <div class="contact-details">
+          <p><i class="fa-solid fa-envelope"></i> support@litesigma.com</p>
+          <p><i class="fa-solid fa-phone"></i> +234 808 000 0000</p>
+          <p><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</p>
+        </div>
+
+        <div class="contact-social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form">
+        <h2>Send a Message</h2>
+        <form id="whatsappForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="5" placeholder="Write your message..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-accent">Send via WhatsApp</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="assets/images/litesigma_logo.webp" alt="Lite Sigma Logo">
+        </div>
+        <p>Lite Sigma delivering business solutions.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-regular fa-envelope"></i> info@litesigma.com.ng</li>
+          <li><i class="fa-solid fa-phone"></i> +234 80 3968 8395</li>
+          <li><i class="fa-solid fa-location-dot"></i> Suite 11A, Midway Plaza, Finance Quarters, Wuye District, Abuja.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2022 LiteSigma. All rights reserved.</p>
+      <a href="#" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <!-- ====== SCRIPTS ====== -->
+  <script>
+    document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const phoneNumber = "2348080000000"; // Replace with your WhatsApp number
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=Hello, my name is ${encodeURIComponent(name)}. ${encodeURIComponent(message)}`;
+      window.open(whatsappURL, "_blank");
+    });
+  </script>
+</body>
+</html>
