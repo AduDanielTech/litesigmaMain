@@ -17,169 +17,6 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/animate.min.css">
 
-  <style>
-   
-
- 
-
-    /* ====== CONTACT SECTION ====== */
-    .contact-section {
-      background: var(--color-bg);
-      padding: 9rem 1rem;
-      
-      font-family: "Oswald", sans-serif;
-    }
-
-    .contact-section .section-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .contact-section .section-header h1 {
-      font-size: 3.5rem;
-      color: var(--color-accent);
-      margin-bottom: 10px;
-    }
-
-    .contact-section .section-header p {
-      color: #555;
-      font-size: 1.1rem;
-    }
-
-    .contact-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
-      max-width: 1100px;
-      margin: 0 auto;
-      align-items: start;
-    }
-
-    /* Left side */
-    .contact-info {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      animation: slideInLeft 1s ease-out;
-    }
-
-    .contact-info h2 {
-      color: var(--color-accent);
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    .contact-info p {
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .contact-details p {
-      margin: 8px 0;
-      font-size: 0.95rem;
-    }
-
-    .contact-social {
-      margin-top: 20px;
-    }
-
-    .contact-social a {
-      color: var(--color-accent);
-      font-size: 1.3rem;
-      margin-right: 15px;
-      transition: transform 0.3s, color 0.3s;
-    }
-
-    .contact-social a:hover {
-      color: #000;
-      transform: scale(1.2);
-    }
-
-    /* Right side */
-    .contact-form {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      animation: slideInRight 1s ease-out;
-    }
-
-    .contact-form h2 {
-      color: var(--color-accent);
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 5px;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-      transition: border-color 0.3s;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: var(--color-accent);
-      outline: none;
-    }
-
-    .btn-accent {
-      display: inline-block;
-      background: var(--color-accent);
-      color: #fff;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-
-    .btn-accent:hover {
-      background: #a44c0d;
-      transform: scale(1.05);
-    }
-
-    /* Animations */
-    @keyframes slideInRight {
-      from {
-        transform: translateX(100px);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideInLeft {
-      from {
-        transform: translateX(-100px);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-  </style>
 </head>
 
 <body>
@@ -190,7 +27,21 @@
       <img src="assets/images/litesigma_logo.webp" alt="logo" class="litesigma_logo">
     </a>
 
-    <button class="hamburger" aria-label="Toggle menu">☰</button>
+    <!-- header right-side controls -->
+  <div class="header-controls" style="margin-left:auto; align-items:center;">
+    <!-- Theme toggle -->
+    <button id="theme-toggle"
+            aria-label="Toggle theme"
+            aria-pressed="false"
+            title="Toggle light / dark">
+      <span class="icon" aria-hidden="true">🌙</span>
+    </button>
+
+    <!-- Hamburger button (keeps original) -->
+    <button class="hamburger" aria-label="Toggle menu">
+      ☰
+    </button>
+  </div>
 
     <nav>
       <a href="index.html">Home</a>
@@ -203,6 +54,7 @@
 
   <!-- ====== CONTACT SECTION ====== -->
   <section class="contact-section">
+    <div class="hero_overlay"></div>
     <div class="section-header">
       <h1>CONTACT US</h1>
       <p>Have questions? Let’s connect and get your business moving forward.</p>
@@ -216,16 +68,15 @@
         <p>We’d love to hear from you. Reach out for inquiries, collaborations, or support.</p>
 
         <div class="contact-details">
-          <p><i class="fa-solid fa-envelope"></i> support@litesigma.com</p>
-          <p><i class="fa-solid fa-phone"></i> +234 808 000 0000</p>
-          <p><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</p>
+          <p><i class="fa-solid fa-envelope"></i> info@litesigma.com.ng</p>
+          <p><i class="fa-solid fa-phone"></i> +234 803 968 8395</p>
+          <p><i class="fa-solid fa-location-dot"></i>  Suite 11A, Midway Plaza, Finance Quarters, Wuye District, Abuja., Nigeria</p>
         </div>
 
         <div class="contact-social">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.facebook.com/share/1Vkp1SswcB/"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/litesigmatech?igsh=MTJxdWtzcGFoZ3UwbQ=="><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/LitesigmaT?t=Iy7CPZhnvz5N2zPbGo0kvw&s=09"><i class="fab fa-x-twitter"></i></a>
         </div>
       </div>
 
@@ -262,8 +113,8 @@
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="index.html#about">About Us</a></li>
-          <li><a href="index.html#services">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="contact-us.html">Contact</a></li>
         </ul>
       </div>
@@ -290,6 +141,7 @@
     </div>
   </footer>
 
+  
   <!-- ====== SCRIPTS ====== -->
   <script>
     document.getElementById("whatsappForm").addEventListener("submit", function(e) {
@@ -300,6 +152,89 @@
       const whatsappURL = `https://wa.me/${phoneNumber}?text=Hello, my name is ${encodeURIComponent(name)}. ${encodeURIComponent(message)}`;
       window.open(whatsappURL, "_blank");
     });
+
+    
+  document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector("header nav");
+  console.log("im work")
+
+  // Create overlay dynamically
+  const overlay = document.createElement("div");
+  overlay.classList.add("nav-overlay");
+  document.body.appendChild(overlay);
+
+  const toggleMenu = () => {
+    nav.classList.toggle("active");
+    overlay.classList.toggle("active");
+  };
+
+  hamburger.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", toggleMenu); // close if overlay is clicked
+});
+
+  /* Theme toggle logic: detect OS preference, persist choice, and react to changes. */
+(function () {
+  const storageKey = 'site-theme';
+  const themeToggle = document.getElementById('theme-toggle');
+  const icon = themeToggle ? themeToggle.querySelector('.icon') : null;
+  const root = document.documentElement;
+
+  // Return 'dark' or 'light'
+  function detectOSTheme() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
+  }
+
+  function applyTheme(theme) {
+    // Apply to <html> so CSS selectors like html[data-theme="light"] work
+    root.setAttribute('data-theme', theme);
+
+    // Update accessible state & icon
+    if (themeToggle) {
+      const isDark = theme === 'dark';
+      themeToggle.setAttribute('aria-pressed', String(isDark));
+      if (icon) icon.textContent = isDark ? '🌙' : '☀️';
+    }
+  }
+
+  // Load saved theme or detect and apply
+  const saved = localStorage.getItem(storageKey);
+  if (saved === 'light' || saved === 'dark') {
+    applyTheme(saved);
+  } else {
+    // No saved choice — use OS preference
+    applyTheme(detectOSTheme());
+  }
+
+  // Listen to toggle clicks
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem(storageKey, next);
+      applyTheme(next);
+    });
+  }
+
+  // If the user hasn't explicitly chosen a theme, follow OS changes in real time
+  // Only auto-apply if there is no saved theme
+  if (!saved && window.matchMedia) {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    mq.addEventListener
+      ? mq.addEventListener('change', (e) => applyTheme(e.matches ? 'dark' : 'light'))
+      : mq.addListener((e) => applyTheme(e.matches ? 'dark' : 'light'));
+  }
+
+  // Expose a tiny hook for devs (optional)
+  window.__applyTheme = applyTheme;
+})();
+
+
   </script>
+  
 </body>
 </html>

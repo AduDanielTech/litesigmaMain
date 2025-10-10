@@ -8,6 +8,7 @@
       box-sizing: border-box;
     }
 
+    
     :root {
       --color-bg: #0A0A0A;
       --color-surface: #1E1E1E;
@@ -16,7 +17,9 @@
       --color-accent: #ce6011;
       --color-accent-hover: #ff7715;
       --color-alt-accent: #3A86FF;
+      --color-text-muted-hero:#272424;
     }
+
 
     .title_header{
           font-family: "Oswald", sans-serif;
@@ -32,6 +35,7 @@
       color: var(--color-text);
       line-height: 1.6;
       padding-top: 0rem;
+      overflow-x: hidden;
     }
 
     header {  
@@ -52,6 +56,7 @@
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--color-accent);
+      background-color: var(--logo-bg);
       display:flex;
         align-items: center;
     }
@@ -163,6 +168,7 @@
   position: relative; /* stays above overlay */
   z-index: 3;
   max-width: 700px;
+  color: var(--color-text);
 }
 
 .hero_text h1 {
@@ -205,7 +211,7 @@
 
 @keyframes revealBlock {
   100% {
-    color: var(--color-text, #fff);
+    color:  #fff;
   }
 }
 
@@ -261,7 +267,7 @@
 .hero_text p {
   font-size: clamp(1.5rem, 1vw, 2rem);
   margin-bottom: 2rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-muted-hero);
 }
 
 .btn-group {
@@ -616,10 +622,10 @@
 }
 
 .sponsor-item img {
-  filter: grayscale(100%) brightness(0.9); 
+  
   
   height: auto;
-  transition: filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  
 }
 .mtn_logo{
     width: 10rem;
@@ -634,6 +640,12 @@
 }
 .manotel_logo{
     width: 8rem;
+}
+.easplay_logo{
+  width: 8rem;
+   filter: grayscale(100%) brightness(0.1); 
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .sponsor-item img:hover {
@@ -676,6 +688,7 @@
 
 .footer-logo img {
   max-width: 160px;
+  background-color: var(--logo-bg);
   margin-bottom: 1rem;
 }
 
@@ -1207,4 +1220,243 @@
 }
    
 
-/* contact us */
+
+ 
+
+    /* ====== CONTACT SECTION ====== */
+    .contact-section {
+      background: var(--color-bg);
+      padding: 9rem 1rem;
+      
+      font-family: "Oswald", sans-serif;
+    }
+
+    .contact-section .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .contact-section .section-header h1 {
+      font-size: 3.5rem;
+      color: var(--color-text);
+      margin-bottom: 10px;
+    }
+
+    .contact-section .section-header p {
+      color:var(--color-text-muted);
+      font-size: 1.1rem;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    /* Left side */
+    .contact-info {
+      background: var(--color-surface);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      animation: slideInLeft 1s ease-out;
+    }
+
+    .contact-info h2 {
+      color: var(--color-text);
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .contact-details p {
+      margin: 8px 0;
+      font-size: 0.95rem;
+    }
+
+    .contact-social {
+      margin-top: 20px;
+    }
+
+    .contact-social a {
+      color: var(--color-text-muted);
+      font-size: 1.3rem;
+      margin-right: 15px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .contact-social a:hover {
+      color: #000;
+      transform: scale(1.2);
+    }
+
+    /* Right side */
+    .contact-form {
+      background: var(--color-surface);
+      padding: 30px;
+      border-radius: 12px;
+      
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      animation: slideInRight 1s ease-out;
+    }
+
+    .contact-form h2 {
+      color: var(--color-text);
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-accent);
+      outline: none;
+    }
+
+    .btn-accent {
+      display: inline-block;
+      background: var(--color-accent);
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-accent:hover {
+      background: #a44c0d;
+      transform: scale(1.05);
+    }
+
+    /* Animations */
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+
+
+    /* ------------------------
+   Theme variables & toggle
+   ------------------------ */
+
+/* Keep your existing :root (dark) vars — these are your dark defaults.
+   We'll leave them as-is; now add a theme attribute override for light.
+*/
+
+/* Light theme override when data-theme="light" on <html> */
+:root[data-theme="light"],
+html[data-theme="light"] {
+  --color-bg: #FFFFFF;
+  --color-surface: #F6F7F9;
+  --color-text: #0A0A0A;
+  --color-text-muted: #3c3c3c; /* gray-500 */
+  --color-accent: #ce6011;     /* keep same accent or tweak */
+  --color-accent-hover: #ff7715;
+  --color-text-muted-hero:#c1c1c1;
+  --color-alt-accent: #2563EB; 
+  --logo-bg:transparent;
+  /* slightly darker alt accent for light */
+  /* optional surfaces/box shadows for light mode */
+  --logo-bg:black;
+  --card-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+/* Smooth transition for theme switch */
+* {
+  transition: background-color 240ms ease, color 240ms ease, border-color 240ms ease;
+}
+
+/* Theme toggle button styles */
+#theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.05));
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+}
+
+/* Make toggle visuals use theme variables */
+html[data-theme="dark"] #theme-toggle {
+  border-color: rgba(255,255,255,0.06);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+  color: var(--color-text);
+}
+
+html[data-theme="light"] #theme-toggle {
+  border-color: rgba(14, 23, 34, 0.06);
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(240,240,240,0.9));
+  color: var(--color-text);
+}
+
+/* optional small icon container if you use an inner element */
+#theme-toggle .icon {
+  pointer-events: none;
+}
+
+/* Keep header elements aligned when adding toggle */
+.header-controls {
+  display:flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* ensure nav & header still work on small screens */
+@media (max-width: 768px) {
+  #theme-toggle { width:40px; height: 26px; font-size:13px; }
+}
