@@ -1393,7 +1393,7 @@
 /* Light theme override when data-theme="light" on <html> */
 :root[data-theme="light"],
 html[data-theme="light"] {
-  --color-bg: #FFFFFF;
+  --color-bg: white;
   --color-surface: #F6F7F9;
   --color-text: #0A0A0A;
   --color-text-muted: #3c3c3c; /* gray-500 */
@@ -1404,7 +1404,7 @@ html[data-theme="light"] {
   --logo-bg:transparent;
   /* slightly darker alt accent for light */
   /* optional surfaces/box shadows for light mode */
-  --logo-bg:black;
+  
   --card-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
 }
 

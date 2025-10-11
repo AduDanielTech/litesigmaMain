@@ -59,43 +59,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  /* Theme toggle logic: detect OS preference, persist choice, and react to changes. */
+/* Theme toggle + logo swap */
 (function () {
   const storageKey = 'site-theme';
   const themeToggle = document.getElementById('theme-toggle');
   const icon = themeToggle ? themeToggle.querySelector('.icon') : null;
   const root = document.documentElement;
+  const logo = document.getElementById('site-logo');
 
-  // Return 'dark' or 'light'
+  const logoDark = 'assets/images/litesigma_logo.webp';
+  const logoLight = 'assets/images/litesigma_logo_light.png';
+
   function detectOSTheme() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-    return 'light';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
   function applyTheme(theme) {
-    // Apply to <html> so CSS selectors like html[data-theme="light"] work
     root.setAttribute('data-theme', theme);
 
-    // Update accessible state & icon
     if (themeToggle) {
       const isDark = theme === 'dark';
       themeToggle.setAttribute('aria-pressed', String(isDark));
       if (icon) icon.textContent = isDark ? '🌙' : '☀️';
     }
+
+    if (logo) {
+      logo.src = theme === 'dark' ? logoDark : logoLight;
+    }
   }
 
-  // Load saved theme or detect and apply
+  // initial theme (saved > OS)
   const saved = localStorage.getItem(storageKey);
-  if (saved === 'light' || saved === 'dark') {
+  if (saved === 'dark' || saved === 'light') {
     applyTheme(saved);
   } else {
-    // No saved choice — use OS preference
     applyTheme(detectOSTheme());
   }
 
-  // Listen to toggle clicks
+  // toggle click
   if (themeToggle) {
     themeToggle.addEventListener('click', function (e) {
       e.preventDefault();
@@ -106,15 +107,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // If the user hasn't explicitly chosen a theme, follow OS changes in real time
-  // Only auto-apply if there is no saved theme
+  // follow OS preference if no manual override
   if (!saved && window.matchMedia) {
     const mq = window.matchMedia('(prefers-color-scheme: dark)');
     mq.addEventListener
       ? mq.addEventListener('change', (e) => applyTheme(e.matches ? 'dark' : 'light'))
       : mq.addListener((e) => applyTheme(e.matches ? 'dark' : 'light'));
   }
-
-  // Expose a tiny hook for devs (optional)
-  window.__applyTheme = applyTheme;
 })();
+
