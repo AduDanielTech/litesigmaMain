@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const icon = themeToggle ? themeToggle.querySelector('.icon') : null;
   const root = document.documentElement;
   const logo = document.getElementById('site-logo');
+  const footerLogo = document.getElementById('site-logo-footer');
 
   const logoDark = 'assets/images/litesigma_logo.webp';
   const logoLight = 'assets/images/litesigma_logo_light.png';
@@ -85,6 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (logo) {
       logo.src = theme === 'dark' ? logoDark : logoLight;
+    }
+    if (footerLogo) {
+      footerLogo.src = theme === 'dark' ? logoDark : logoLight;
     }
   }
 
